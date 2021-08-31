@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="%24EntityName\Commands\%24CreateEntityName\" />
+    <Folder Include="%24EntityName\Dto\" />
+    <Folder Include="%24EntityName\Queries\%24GetById\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Entities\Template.DomainServices.Interfaces\Template.DomainServices.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Utils\Template.Utils\Template.Utils.csproj" />
+    <ProjectReference Include="..\Template.ApplicationServices.Interfaces\Template.ApplicationServices.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
