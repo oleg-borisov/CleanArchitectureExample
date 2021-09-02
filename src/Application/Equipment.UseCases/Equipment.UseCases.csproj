@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="FluentValidation" Version="10.3.3" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="System.Collections" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EquipmentItems\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataAccess\Equipment.DataAccess.Interfaces\Equipment.DataAccess.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Entities\Equipment.DomainServices.Interfaces\Equipment.DomainServices.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Entities\Equipment.Entities\Equipment.Entities.csproj" />
+    <ProjectReference Include="..\Equipment.ApplicationServices.Interfaces\Equipment.ApplicationServices.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

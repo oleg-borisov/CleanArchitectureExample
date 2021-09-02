@@ -1,2 +1,7 @@
-﻿Solution/.idea
-Solution/.vs
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+.idea
+.vs

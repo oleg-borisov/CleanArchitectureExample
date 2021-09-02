@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Equipment.DomainServices.Interfaces\Equipment.DomainServices.Interfaces.csproj" />
+    <ProjectReference Include="..\Equipment.Entities\Equipment.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
