@@ -23,8 +23,20 @@ namespace Equipment.UseCases.Buildings.Queries.GetBuildingCollection
 
         public async Task<ICollection<BuildingDto>> Handle(GetBuildingCollectionQuery request, CancellationToken cancellationToken)
         {
-            var buildings = await dBContext.Buildings
-                .AsNoTracking()
+            var getBuildingsQuery = dBContext.Buildings
+                .AsNoTracking();
+
+            if (request.Offset.HasValue)
+            {
+                getBuildingsQuery = getBuildingsQuery.Skip(request.Offset.Value);
+            }
+
+            if (request.Length.HasValue)
+            {
+                getBuildingsQuery = getBuildingsQuery.Take(request.Length.Value);
+            }
+
+            var buildings = await getBuildingsQuery
                 .ToListAsync();
 
             var buildingDtos = buildings.Select(mapper.Map<BuildingDto>).ToList();

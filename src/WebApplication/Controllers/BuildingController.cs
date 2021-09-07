@@ -29,9 +29,9 @@ namespace WebApplication.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<ICollection<BuildingDto>>> GetAsync()
+        public async Task<ActionResult<ICollection<BuildingDto>>> GetAsync(int? offset = null, int? limit = null)
         {
-            var buildingDtos = await mediator.Send(new GetBuildingCollectionQuery());
+            var buildingDtos = await mediator.Send(new GetBuildingCollectionQuery { Offset = offset, Length = limit });
 
             return Ok(buildingDtos);
         }
