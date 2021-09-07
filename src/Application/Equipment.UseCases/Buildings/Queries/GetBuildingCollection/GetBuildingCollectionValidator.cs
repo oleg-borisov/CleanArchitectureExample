@@ -2,7 +2,7 @@
 
 namespace Equipment.UseCases.Buildings.Queries.GetBuildingCollection
 {
-    class GetBuildingCollectionValidator : AbstractValidator<GetBuildingCollectionQuery>
+    public class GetBuildingCollectionValidator : AbstractValidator<GetBuildingCollectionQuery>
     {
         public GetBuildingCollectionValidator()
         {
